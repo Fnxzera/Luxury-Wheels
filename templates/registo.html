@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Luxury Wheels</title>
+    <link rel="stylesheet" href="/static/registo.css">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>Luxury Wheels</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <p class="texto-cabecalho">BEM VINDO À LUXURY WHEELS!</p>
+            <img src="/static/logo.png" alt="Logo Luxury Wheels">
+        </div>
+    </header>
+    <main>
+        <h1 class="titulo">Cadastre-se abaixo</h1>
+        <div class="card">
+            <form action="/registro" method="post">
+            <div class="container">
+                <div class="info">
+                    <label>NOME DE USUÁRIO:</label>
+                    <label>PASSWORD:</label>
+                    <label>CONFIRME O PASSWORD:</label>
+                </div>
+                <div class="dados">
+                    
+                    <input type="text" placeholder="Username" name="login-cliente_registo">
+                    <input type="password" placeholder="Password" name="pass-cliente_registo1">
+                    <input type="password" placeholder="Password" name="pass-cliente_registo2">
+                
+                </div>
+            </div>
+            <h2>CATEGORIAS</h2>
+            <img src="/static/tabela_precos.png" alt="tabela_de_precos">
+            <div class="seletor">
+                <label for="">Escolha a categoria:</label>
+                <select name="categ_registro" id="categoria">
+                    <option value="Gold">Gold</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Economic">Economic</option>
+                </select>
+            </div>
+            
+            <button class="btn btn-primary">CONFIRMAR</button>
+            {% set mensagem = get_flashed_messages() %}
+                            {% if mensagem %}
+            <div class="flash_alerta">
+                {{mensagem[0]}}
+            </div>
+                {% endif %}
+        </form>
+        </div>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Luxury Wheels</title>
+    <link rel="stylesheet" href="/static/catalogo.css">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonte Archivo Black -- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Luxury Wheels</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <h1>Bem vindo(a) {{usuario}}!</h1>
+        </div>
+        <h1 class="titulo-catalogo">Catálogo</h1>
+        <p>Cliente Gold</p>
+    </header>
+    <main>
+        <div class="catalogo">
+            <div class="item">
+                <img src="/static/car_gold/AUDI_A4.png" alt="Imagem 1">
+                <p class="nome-carro">AUDI A4</p>
+                <p class="valor-carro">Valor diário: 300€</p>
+            </div>
+            <div class="item">
+                <img src="/static/car_gold/BMW_320i.png" alt="Imagem 2">
+                <p class="nome-carro">BMW 320i</p>
+                <p class="valor-carro">Valor diário: 400€</p>
+            </div>
+            <div class="item">
+                <img src="/static/car_gold/MERCEDESBENZ_A_180.png" alt="Imagem 3">
+                <p class="nome-carro">MERCEDES BENZ A180</p>
+                <p class="valor-carro">Valor diário: 300€</p>
+            </div>
+            <div class="item">
+                <img src="/static/car_gold/PORSHE_911.jpg" alt="Imagem 4">
+                <p class="nome-carro">PORSHE 911</p>
+                <p class="valor-carro">Valor diário: 600€</p>
+            </div>
+            <div class="item">
+                <img src="/static/car_gold/TESLA_MODELS.jpg" alt="Imagem 5">
+                <p class="nome-carro">TESLA MODEL S</p>
+                <p class="valor-carro">Valor diário: 450€</p>
+            </div>
+            <div class="item">
+                <img src="/static/car_gold/VOLVO_XC60.jpg" alt="Imagem 6">
+                <p class="nome-carro">VOLVO XC60</p>
+                <p class="valor-carro">Valor diário: 350€</p>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="pagamento">
+            <div class="texto-reserva">
+                <h1>Faça a sua reserva!</h1>
+            </div>
+        </div>
+        <div class="form-control">
+            <form action="/total" method="post">
+                <label for="dataRecolha">Data de Recolha:</label>
+                <input type="date" id="dataRecolha" name="data_recolha" required>
+                <script>
+                    document.getElementById('dataRecolha').min = new Date().toISOString().split('T')[0];
+                </script>
+                <label for="dataDevolucao">Data de Devolução:</label>
+                <input type="date" id="dataDevolucao" name="data_devolucao" required>
+                <script>
+                    document.getElementById('dataRecolha').addEventListener('change', function () {
+                        var dataRecolha = new Date(this.value);
+                        dataRecolha.setDate(dataRecolha.getDate() + 1); 
+                        var dataMinDevolucao = dataRecolha.toISOString().split('T')[0];
+                        document.getElementById('dataDevolucao').min = dataMinDevolucao;
+                    });
+                </script>
+                <div class="total">
+                    <button type="submit" class="btn btn-primary btn-block mx-auto">RESERVAR AGORA</button>
+
+                </div>
+            </form>
+
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Luxury Wheels</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonte Archivo Black -- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>Luxury Wheels</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <p class="texto-cabecalho">BEM VINDO À LUXURY WHEELS!</p>
+            <div class="registo">
+                <p>Não possui conta?</p>
+                <a href="/registo">Registe-se aqui!</a>
+            </div>
+        </div>
+        <div class="container p-4">
+            <h1 class="titulo">Luxury Wheels</h1>
+            <img src="/static/logo.png" alt="Logo do Site">
+        </div>
+    </header>
+
+    <p class="paragrafo">Alugue seu automóvel ainda hoje!</p>
+    <main>
+        <div class="row">
+            <div class="cardd">
+                <div class="card">
+                    <form action="/login" method="post" class="formulario">
+                        <div class="form-group">
+                            <input type="text" name="login-cliente" placeholder="Login" class="form-control text-center"
+                                autofocus>
+                            <input type="password" name="password-cliente" placeholder="Password"
+                                class="form-control text-center" autofocus>
+
+
+                            <button type="submit" class="btn btn-primary btn-block mx-auto ">Efetuar Login </button>
+                            {% set mensagem = get_flashed_messages() %}
+                            {% if mensagem %}
+                            <div class="flash_alerta">
+                                {{mensagem[0]}}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <p style="font-family: 'Oswald', sans-serif;font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+        A vida é uma eterna viagem.</p>
+</body>
+
+</html>

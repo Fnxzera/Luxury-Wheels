@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Wheels</title>
+    <link rel="stylesheet" href="/static/confirmacao.css">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonte Archivo Black -- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>Luxury Wheels</title>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo-revise">REVISE SUA RESERVA</h1>
+        <section>
+        <div class="reservaa" style="text-align: center; margin-bottom: 30px ">
+            <div class="itemm-1">
+                <label>CARRO ESCOLHIDO:</label>
+                <label>PERÍODO:</label>
+                <label>VALOR TOTAL:</label>
+            </div>
+            <div class="itemm-2">         
+                <label class="dado-reserva">{{carro}}</label>   
+                <label class="dado-reserva">{{data_recolha}} à {{data_devolucao}}</label>
+                <label class="dado-reserva">{{total}}</label>
+            </div>
+        </div>
+    </section>
+    </header>
+    <main>
+        <form action="/finalizacao" method="post">
+            <div class="form-control">
+                <h2 class="titulo-pagamento">Opções de Pagamento</h2>
+                <div class="opcao-pagamento">
+                    <input type="radio" id="pagamento-transferencia" name="opcao-pagamento" value="transferencia">
+                    <label for="pagamento-transferencia">Pagamento por Transferência Bancária</label>
+
+                    <input type="radio" id="pagamento-cartao" name="opcao-pagamento" value="cartao">
+                    <label for="pagamento-cartao">Pagamento por Cartão</label>
+                </div>
+                <div class="dados-pagamento">
+                    <div id="dados-cartao" class="hidden">
+                        <div class="box-cartao">
+                            <div class="labell">
+                                <label for="nome">Nome do Titular:</label>
+                                <label for="numero-cartao">Número do Cartão:</label>
+                                <label for="validade">Validade (mm/aaaa):</label>
+                                <label for="codigo-seguranca">Código de Segurança:</label>
+                            </div>
+                            <div class="itens-cartao">
+                                <input class="item-cartao" type="text" id="nome" name="nome"><br>
+                                <input class="item-cartao" type="text" id="numero-cartao" name="numero-cartao"><br>
+                                <input class="item-cartao" type="text" id="validade" name="validade"
+                                    placeholder="mm/aaaa"><br>
+                                <input class="item-cartao" type="text" id="codigo-seguranca"
+                                    name="codigo-seguranca"><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dados-transferencia" id="dados-transferencia">
+                    <label for="numero-iban">IBAN para tranferência:</label>
+                    <input type="text" id="numero-iban" name="numero-iban">
+                </div>
+                {% set mensagem = get_flashed_messages() %}
+                {% if mensagem %}
+                <div class="flash_alerta">
+                    {{mensagem[0]}}
+                </div>
+                {% endif %}
+                <script>
+                    const opcaoTransferencia = document.getElementById('pagamento-transferencia');
+                    const opcaoCartao = document.getElementById('pagamento-cartao');
+                    const dadosCartao = document.getElementById('dados-cartao');
+                    const validadeInput = document.getElementById('validade');
+
+                    opcaoTransferencia.addEventListener('change', function () {
+                        dadosCartao.classList.add('hidden');
+                    });
+                    opcaoCartao.addEventListener('change', function () {
+                        dadosCartao.classList.remove('hidden');
+                    });
+                    validadeInput.addEventListener('input', function () {
+                        if (this.value.length === 2 && this.value.indexOf('/') === -1) {
+                            this.value += '/';
+                        }
+                    });
+                </script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        function toggleIBANField() {
+                            const pagamentoTransferencia = document.getElementById('pagamento-transferencia');
+                            const dadosTransferencia = document.getElementById('dados-transferencia');
+
+                            dadosTransferencia.style.display = pagamentoTransferencia.checked ? 'block' : 'none';
+                        }
+                        const opcoesPagamento = document.querySelectorAll('input[name="opcao-pagamento"]');
+                        opcoesPagamento.forEach(function (opcao) {
+                            opcao.addEventListener('change', toggleIBANField);
+                        });
+                        toggleIBANField();
+                    });
+                </script>
+                <div class="form-control">
+                    <button class="btn btn-primary">Confirmar Reserva</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>

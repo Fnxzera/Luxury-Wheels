@@ -1,0 +1,145 @@
+
+body{
+    background: #7F7FD5;  
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+}
+
+header{
+    display: flex;
+
+}
+
+.cabecalho{
+    background-color: #6d8be3;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: 2px solid black;
+    
+}
+
+.cabecalho img{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.cabecalho .texto-cabecalho{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
+    font-family: 'Oswald';
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 80px);
+    
+}
+
+.titulo{
+    font-family: 'Oswald' , sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+
+.card{
+    width: 40%;
+    height: 90% !important;
+    align-items: center;
+}
+.card form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    display: flex ; 
+    flex-direction: row !important;
+	border-radius: 10px;
+	padding: 30px;
+    justify-content: center;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 35%; 
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.info label{
+    font-family: 'Oswald';
+    text-align: right;
+    margin-right: 10px;
+
+}
+
+.dados{
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+    gap: 3px;
+
+}
+
+.dados input{
+    border-radius: 4px; 
+    background-color: #acd7f1;
+    margin-top: 3px;   
+}
+
+.dados, .info{
+    height: 30%;
+}
+
+.card h2{
+    font-family: 'Oswald';
+    font-size: 30px;
+}
+
+.card img{
+    width: 65%;
+    height: 25%;
+    margin-bottom: 20px;
+}
+
+.seletor{
+    display: flex;
+    justify-content: center;
+}
+
+.seletor label{
+    font-family: 'Oswald';
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.seletor select{
+    width: 120px;
+}
+
+.card button{
+    margin-top: 70px;
+}
+
+.flash_alerta{
+    font-family: 'Arial';
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

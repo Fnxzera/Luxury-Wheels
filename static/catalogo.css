@@ -1,0 +1,118 @@
+body{
+
+    background: #7F7FD5;  
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+}
+
+.cabecalho{
+    background-color: #6d8be3 !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: 2px solid black;
+}
+
+.cabecalho h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-top: 12px;
+    margin-left: 20px;
+    color: #000000
+}
+
+.titulo-catalogo{
+    font-family: 'Oswald' , sans-serif;
+    font-size: 80px;
+    text-align: center;
+}
+
+header p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px; 
+    color: #000000; 
+    text-align: center; 
+    margin-top: 15px;
+}
+
+.texto-reserva{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.texto-reserva h1{
+    font-weight: bold
+}
+
+.nome-carro{
+    font-family: 'Oswald';
+    font-weight: bold
+}
+
+.valor-carro{
+    margin-bottom: 0px;
+}
+
+img{
+    height: auto;
+    max-width: 10%
+}
+
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.item {
+    width: calc(33.33% - 20px);  
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: 270px;
+    border-radius: 5px;
+
+}
+
+.pagamento .h1{
+    font-family: 'Oswald', sans-serif;
+}
+
+.form-control{
+    text-align: center; 
+    margin-bottom: 30px
+}
+.form-control form{
+    margin-top: 15px;
+}
+
+
+.form-control button{
+    
+    margin-bottom: 20px; 
+    margin-top: 20px
+
+}
+.pagamento .container{
+    width: 50%
+}
+label{
+    font-family: 'Oswald', sans-serif;
+}
+
+.titulo-revise, .titulo-pagamento{
+    font-family: 'Oswald';
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+

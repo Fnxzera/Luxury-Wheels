@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>Luxury Wheels</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>Luxury Wheels</title>
+</head>
+<body>
+    <main class="container p-4">
+      <h1 class="display-3 text-center mt0 titulo">ESCOLHA AQUI A SUA VIATURA</h1>
+    </main>
+    <div class = "form-control" style="text-align: center">
+        <div class = "data" style="font-family: 'Oswald'; margin-top: 20px">
+            <p>RECOLHA DA VIATURA: {{data_recolha}}</p>
+            <p>DEVOLUÇÃO: {{data_devolucao}}</p>
+        </div>
+        <form action="/pagamento" method="post" >
+        <label for="carro">CARROS DISPONÍVEIS:</label>
+        <select id="carro" name="carro">
+            {% for carro in carros_disponiveis %}
+                <option value="{{ carro }}">{{ carro }}</option>
+            {% endfor %}
+        </select>
+
+        <div class="total">
+            <button type="submit" class="btn btn-primary btn-block mx-auto" style="margin-bottom: 20px; margin-top: 20px ">RESERVAR AGORA</button>
+
+        </div>
+        </form>
+
+    </div>
+</body>
+</html>

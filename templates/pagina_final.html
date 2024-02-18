@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>Luxury Wheels</title>
+    <link rel="stylesheet" href="/static/finalpage.css">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>Luxury Wheels</title>
+</head>
+<body>
+    <header>
+      <h1>PARABÉNS, {{user}}!</h1>
+       <div>
+           <h2 class="titulo">Sua reserva está confirmada.</h2>
+       </div>
+    </header>
+    <div class = "form-control">
+        <label>CARRO: {{carro}}</label>
+        <label>DATA RECOLHA: {{data_recolha}}</label>
+        <label>DATA DEVOLUÇÃO: {{data_devolucao}} </label>
+        </div>
+    <div class="btn">
+        <form action="/" method="post" >
+            <button class="btn btn-primary">VOLTAR À PÁGINA INICIAL</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+body{
+
+    background: #7F7FD5;  
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+}
+
+.titulo{
+    font-family: 'Oswald', sans-serif;
+    color: #000000 !important;
+    right: 20px; /* Ajuste a posição esquerda conforme necessário */
+    display: inline-block; /* Permite que o título e a logo estejam na mesma linha */
+}
+
+.cabecalho{
+    background-color: #6d8be3 !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: 2px solid black;
+    
+}
+
+.cabecalho .texto-cabecalho{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
+    font-family: 'Oswald';
+}
+
+.cabecalho .registo {
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald';
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cabecalho .registo a{
+    color: #000;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cabecalho .registo a:hover{
+    border-bottom: 2px solid #fff;
+}
+
+.paragrafo{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px; color: #000000; 
+    text-align: center; 
+    margin-top: -25px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    height: 200px;
+}
+
+
+.cardd{
+    
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.card{
+    width: 30%;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0 40px;
+    margin-top: 15px;
+}
+
+
+
+.form-group .flash_alerta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.titulo-catalogo{
+    display: flex;
+    text-align: center;
+    font-family: 'Oswald';
+    font-size: 80px;
+}
+
+.container{
+    text-align: center; /* Centraliza o conteúdo na página */
+}
+img{
+    height: auto;
+    max-width: 10%
+}
+.flash_alerta{
+    font-family: 'Arial';
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+

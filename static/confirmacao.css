@@ -1,0 +1,150 @@
+body{
+
+    background: #7F7FD5;  
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+}
+
+header{
+    align-items: center;
+    justify-content: center;
+}
+
+header section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.reservaa{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 80%;
+    width: 30%;
+    align-items: center;
+    border: 2px solid #4465cb;
+    border-radius: 4px;
+    
+}
+
+.reservaa label{
+    margin-bottom: 15px;
+}
+
+.itemm-1{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 3px;
+    
+}
+.itemm-2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 3px; 
+}
+
+.itemm-2 label{
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #acd7f1;
+}
+.pagamento .h1{
+    font-family: 'Oswald', sans-serif;
+}
+
+.form-control{
+    text-align: center; 
+}
+
+.form-control button{
+    margin-bottom: 20px; 
+    margin-top: 20px
+
+}
+
+label{
+    font-family: 'Oswald', sans-serif;
+}
+
+.titulo-revise, .titulo-pagamento{
+    font-family: 'Oswald';
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main form{
+    width: 60%;
+    border: 2px solid #4465cb;
+    border-radius: 5px;
+    background-color: white;
+    
+}
+
+.hidden {
+    display: none;
+    
+}
+
+.box-cartao{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcao-pagamento label{
+    font-family: 'Oswald';
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.labell{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    gap: 9px;
+}
+
+.labell label{
+    text-align: right;
+}
+
+.itens-cartao{
+    width: 10%;
+    margin-right: 10px;
+}
+.item-cartao{  
+    border-radius: 4px; 
+    background-color: #acd7f1;
+    margin-top: 3px;    
+}
+
+.dados-transferencia input{
+    border-radius: 4px; 
+    background-color: #acd7f1;
+    width: 27%;
+}
+
+.flash_alerta{
+    font-family: 'Arial';
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
